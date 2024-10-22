@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -6,8 +6,18 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
-  title = 'zinggrid-angular-18-app';
+  title = "Angular 18 Integration";
+
+  datastore = [
+    { "breed": "Chow Chow", "name": "Butter" },
+    { "breed": "Dachshund", "name": "Sousage" },
+    { "breed": "Pug", "name": "Potat" },
+    { "breed": "Corgi", "name": "Plop" },
+    { "breed": "Pomeranian", "name": "Floof" }
+  ]
+
 }
